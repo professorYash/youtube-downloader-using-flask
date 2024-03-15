@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #254343;
+  /* background-color: #2f4f4f; */
+  color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="text"],
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+.download-message {
+  text-align: center;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 14px; /* Adjust font size for better readability on small screens */
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  form {
+    max-width: 90%; /* Adjust form width for better fit on small screens */
+    margin: 0 auto;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%; /* Make input fields and button full width on small screens */
+    margin: 5px auto; /* Adjust margin for better spacing */
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Video Downloader</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}" />
+</head>
+
+<body>
+  <h1>Download Youtube Video</h1>
+  <form action="/download-video">
+    <input type="text" name="video-link" id="video-link" placeholder="Enter your video link for video">
+    <button>Download</button>
+  </form>
+  <h1>Download Youtube Video as Audio</h1>
+  <form action="/download-audio">
+    <input type="text" name="audio-link" id="audio-link" placeholder="Enter your video link for audio">
+    <button>Download</button>
+  </form>
+  <div class="download-message">
+    <p>Download message: {{download_message}}</p>
+  </div>
+</body>
+
+</html>
