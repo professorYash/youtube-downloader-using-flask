@@ -12,7 +12,9 @@ def download_youtube_video_as_song(video_link: str) -> None:
         stream = yt.streams.filter(only_audio=True).first()
         # Downloading the video
         try:
-            downloads_path = os.path.expanduser("~/Downloads")
+            home_dir = os.path.expanduser("~")
+            downloads_path = os.path.join(home_dir, "Downloads")
+
             audio_path = stream.download(output_path=downloads_path)
             print(f"Video downloaded successfully to: {audio_path}")
             # return video_path  # Since I'm not using it with something else so no need of returing anything from here.

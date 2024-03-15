@@ -21,7 +21,9 @@ def download_youtube_video(video_link: str) -> None:
         )
         # Downloading the video
         try:
-            downloads_path = os.path.expanduser("~/Downloads")
+            home_dir = os.path.expanduser("~")
+            downloads_path = os.path.join(home_dir, "Downloads")
+            
             video_path = stream.download(output_path=downloads_path)
             # print(f"Video downloaded successfully to: {video_path}")
             return f"Video downloaded successfully to: {video_path}"
